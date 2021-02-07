@@ -136,7 +136,7 @@ void loop() {
     if (knock_percentage >= 80) digitalWrite(LED_LIMIT, HIGH); else digitalWrite(LED_LIMIT, LOW);
 
     //Calculate engine speed.
-    float engineSpeed = 60000 / (currentTime * numberofCylinders / 2000);
+    float engineSpeed = (60000 * 2000) / (currentTime * numberofCylinders)
 
     //Calculate time constant.
     timeConstant = map(engineSpeed, 1000, 9000, SPU_SET_MAX_TIME, SPU_SET_MIN_TIME);
